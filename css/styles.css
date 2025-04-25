@@ -19,9 +19,11 @@
 /* Sticky-footer flex layout */
 html,
 body {
-  /* was: height: 100%; */
-  min-height: 100%;            /* allow page to grow beyond 1 viewport */
+  /* ✱✱ FIX: let the page grow on mobile ✱✱                 *
+   * was: height: 100%;                                     */
+  min-height: 100%;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -337,7 +339,7 @@ button:hover {
   /* Sidebar collapses off-canvas */
   .sidebar {
     transform: translateX(-100%);
-    width: 220px;              /* a bit wider for touch */
+    width: 220px;       /* touch-friendly width */
     z-index: 998;
   }
   .sidebar.show {
@@ -373,13 +375,13 @@ button:hover {
 
   /* Menu container spans full width, scrolls above cart */
   .menu-container {
-    margin: 60px 0 0 0; /* header space, no sidebar */
+    margin: 60px 0 0 0;           /* fixed header space */
     padding: 1rem;
     height: calc(100vh - 60px - 220px);
     overflow-y: auto;
   }
 
-  /* Make buttons & inputs easier to tap */
+  /* Larger tap targets */
   .menu-item button,
   .cart button,
   .landing-info button,
@@ -396,16 +398,16 @@ button:hover {
 
 /* ---------- Tablets (600 px – 1024 px) ---------- */
 @media (min-width: 600px) and (max-width: 1024px) {
-  /* Slightly narrower sidebar & cart to leave room for menu */
+  /* Slightly narrower sidebar & cart */
   .sidebar {
     width: 180px;
   }
   .menu-container {
-    margin-left: 200px; /* sidebar + padding */
+    margin-left: 200px;
   }
   .cart {
     width: 220px;
   }
 }
 
-/* No special rules above 1024 px – existing desktop styles apply */
+/* Above 1024 px – desktop styles apply */
