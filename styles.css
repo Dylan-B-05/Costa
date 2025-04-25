@@ -468,3 +468,51 @@ footer,
     flex-direction: column;
   }
 }
+/* ========== FINAL FIX: Footer Sticking & Mobile Stretch ========== */
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main,
+.landing-container,
+.menu-container,
+.checkout-container,
+.confirmation-container {
+  flex: 1 0 auto;
+  min-height: 0;
+  padding-top: 60px;
+}
+
+footer,
+.footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+/* Mobile fix for short content */
+@media (max-width: 599px) {
+  html, body {
+    height: auto !important;
+    min-height: 100% !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main,
+  .landing-container,
+  .menu-container,
+  .checkout-container,
+  .confirmation-container {
+    flex: 1 0 auto;
+    min-height: 0;
+  }
+
+  footer,
+  .footer {
+    margin-top: auto;
+    flex-shrink: 0;
+  }
+}
