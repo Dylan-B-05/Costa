@@ -19,8 +19,7 @@
 /* Sticky-footer flex layout */
 html,
 body {
-  /* ✱✱ FIX: let the page grow on mobile ✱✱                 *
-   * was: height: 100%;                                     */
+  /* was height:100%; — already removed */
   min-height: 100%;
 }
 
@@ -82,21 +81,17 @@ main,
 
 /* ---------- Page-specific fixed backgrounds ---------- */
 .landing-body {
-  background: url('../images/Landing Page.jpg') center center no-repeat;
-  background-size: cover;
+  background: url('../images/Landing Page.jpg') center center / cover no-repeat;
 }
 .menu-body {
-  background: url('../images/Menu Page.jpg') center center no-repeat;
-  background-size: cover;
+  background: url('../images/Menu Page.jpg') center center / cover no-repeat;
   background-attachment: fixed;
 }
 .checkout-body {
-  background: url('../images/Checkout Page.jpg') center center no-repeat;
-  background-size: cover;
+  background: url('../images/Checkout Page.jpg') center center / cover no-repeat;
 }
 .confirmation-body {
-  background: url('../images/Confirmation Page.jpg') center center no-repeat;
-  background-size: cover;
+  background: url('../images/Confirmation Page.jpg') center center / cover no-repeat;
 }
 
 /* ---------- Confirmation overlay ---------- */
@@ -143,7 +138,7 @@ main,
   width: 200px;
   background-color: rgba(62, 15, 27, 0.8);
   position: fixed;
-  top: 60px;            /* below fixed header */
+  top: 60px;
   bottom: 0;
   left: 0;
   overflow-y: auto;
@@ -167,8 +162,8 @@ main,
 
 /* Area that holds menu items */
 .menu-container {
-  margin-left: 220px;        /* space for sidebar */
-  margin-top: 60px;          /* space for fixed header */
+  margin-left: 220px;
+  margin-top: 60px;
   padding: 1rem;
 
   height: calc(100vh - 60px);
@@ -249,7 +244,7 @@ main,
 
 /* ---------- Modal ---------- */
 .modal {
-  display: none;                /* JS shows it */
+  display: none;
   position: fixed;
   z-index: 999;
   left: 0;
@@ -336,10 +331,17 @@ button:hover {
 
 /* ---------- Phones (≤ 599 px) ---------- */
 @media (max-width: 599px) {
+
+  /* ✱✱ NEW: ensure the page can grow on iOS/Android ✱✱ */
+  html, body {
+    height: auto !important;
+    min-height: 100% !important;
+  }
+
   /* Sidebar collapses off-canvas */
   .sidebar {
     transform: translateX(-100%);
-    width: 220px;       /* touch-friendly width */
+    width: 220px;
     z-index: 998;
   }
   .sidebar.show {
@@ -359,7 +361,7 @@ button:hover {
     cursor: pointer;
   }
 
-  /* Cart moves to bottom full-width */
+  /* Cart moves to bottom */
   .cart {
     top: auto;
     bottom: 0;
@@ -375,7 +377,7 @@ button:hover {
 
   /* Menu container spans full width, scrolls above cart */
   .menu-container {
-    margin: 60px 0 0 0;           /* fixed header space */
+    margin: 60px 0 0 0;
     padding: 1rem;
     height: calc(100vh - 60px - 220px);
     overflow-y: auto;
@@ -398,7 +400,6 @@ button:hover {
 
 /* ---------- Tablets (600 px – 1024 px) ---------- */
 @media (min-width: 600px) and (max-width: 1024px) {
-  /* Slightly narrower sidebar & cart */
   .sidebar {
     width: 180px;
   }
@@ -410,4 +411,4 @@ button:hover {
   }
 }
 
-/* Above 1024 px – desktop styles apply */
+/* No special rules above 1024 px – desktop styles apply */
