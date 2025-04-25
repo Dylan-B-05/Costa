@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Costa Coffee - Menu</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="menu-body">
+  <header class="header">
+    <div class="header-inner">
+      <!-- Clickable logo linking back to index.html -->
+      <a href="index.html">
+        <img src="images/costa-logo.png" alt="Costa Coffee Logo" class="logo" />
+      </a>
+    </div>
+  </header>
+
+  <!-- Sidebar Navigation for Categories -->
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#coffee">Coffee</a></li>
+        <li><a href="#coffee-over-ice">Coffee Over Ice</a></li>
+        <li><a href="#frappe">Frappé</a></li>
+        <li><a href="#muffins-cakes-sweet-treats">Muffins, Cakes &amp; Sweet Treats</a></li>
+        <li><a href="#other-hot-drinks">Other Hot Drinks</a></li>
+        <li><a href="#pastries-baps-breakfast">Pastries, Baps &amp; Breakfast</a></li>
+        <li><a href="#sandwiches-toasties-hot-meals">Sandwiches, Toasties &amp; Hot Meals</a></li>
+        <li><a href="#tea-infusions">Tea &amp; Infusions</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content: Full Static Menu -->
+  <main class="menu-container">
+    <!-- 1) Coffee -->
+    <section id="coffee" class="menu-section">
+      <h2>Coffee</h2>
+      <!-- Drinks => "Customize" calls openModal(...) -->
+      <div class="menu-item">
+        <h3>Americano</h3>
+        <p>Americano from Coffee.</p>
+        <p>From €3.50</p>
+        <button onclick="openModal('Americano','Americano from Coffee',3.50)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Cappuccino</h3>
+        <p>Cappuccino from Coffee.</p>
+        <p>From €3.50</p>
+        <button onclick="openModal('Cappuccino','Cappuccino from Coffee',3.50)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Caramel Cortado</h3>
+        <p>Caramel Cortado from Coffee.</p>
+        <p>From €3.50</p>
+        <button onclick="openModal('Caramel Cortado','Caramel Cortado from Coffee',3.50)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Cinnamon Bun Latte</h3>
+        <p>Cinnamon Bun Latte from Coffee.</p>
+        <p>From €3.50</p>
+        <button onclick="openModal('Cinnamon Bun Latte','Cinnamon Bun Latte from Coffee',3.50)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Cortado</h3>
+        <p>Cortado from Coffee.</p>
+        <p>From €3.50</p>
+        <button onclick="openModal('Cortado','Cortado from Coffee',3.50)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Espresso</h3>
+        <p>Espresso from Coffee.</p>
+        <p>From €4.00</p>
+        <button onclick="openModal('Espresso','Espresso from Coffee',4.00)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Flat Black</h3>
+        <p>Flat Black from Coffee.</p>
+        <p>From €3.50</p>
+        <button onclick="openModal('Flat Black','Flat Black from Coffee',3.50)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Flat White</h3>
+        <p>Flat White from Coffee.</p>
+        <p>From €4.00</p>
+        <button onclick="openModal('Flat White','Flat White from Coffee',4.00)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Latte</h3>
+        <p>Latte from Coffee.</p>
+        <p>From €3.50</p>
+        <button onclick="openModal('Latte','Latte from Coffee',3.50)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Mocha</h3>
+        <p>Mocha from Coffee.</p>
+        <p>From €3.50</p>
+        <button onclick="openModal('Mocha','Mocha from Coffee',3.50)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Mocha Cortado</h3>
+        <p>Mocha Cortado from Coffee.</p>
+        <p>From €4.50</p>
+        <button onclick="openModal('Mocha Cortado','Mocha Cortado from Coffee',4.50)">Customize</button>
+      </div>
+    </section>
+
+    <!-- 2) Coffee Over Ice -->
+    <section id="coffee-over-ice" class="menu-section">
+      <h2>Coffee Over Ice</h2>
+      <div class="menu-item">
+        <h3>Caramel Iced Whipped Latte</h3>
+        <p>Caramel Iced Whipped Latte from Coffee Over Ice.</p>
+        <p>From €3.50</p>
+        <button onclick="openModal('Caramel Iced Whipped Latte','Caramel Iced Whipped Latte from Coffee Over Ice',3.50)">Customize</button>
+      </div>
+      <div class="menu-item">
+        <h3>Cinnamon Bun Iced Latte</h3>
+        <p>Cinnamon Bun Iced Latte from Coffee Over Ice.</p>
+        <p>From €3.00</p>
+        <button onclick="openModal('Cinnamon Bun Iced Latte','Cinnamon Bun Iced Latte from Coffee Over Ice',3.00)">Customize</button>
+      </div>
+      <!-- ... More Iced Drinks ... -->
+      <div class="menu-item">
+        <h3>White Chocolate Iced Whipped Latte</h3>
+        <p>White Chocolate Iced Whipped Latte from Coffee Over Ice.</p>
+        <p>From €3.00</p>
+        <button onclick="openModal('White Chocolate Iced Whipped Latte','White Chocolate Iced Whipped Latte from Coffee Over Ice',3.00)">Customize</button>
+      </div>
+    </section>
+
+    <!-- 3) Frappé -->
+    <section id="frappe" class="menu-section">
+      <h2>Frappé</h2>
+      <div class="menu-item">
+        <h3>Chocolate Fudge Brownie Frappé</h3>
+        <p>Chocolate Fudge Brownie Frappé from Frappé.</p>
+        <p>From €4.00</p>
+        <button onclick="openModal('Chocolate Fudge Brownie Frappé','Chocolate Fudge Brownie Frappé from Frappé',4.00)">Customize</button>
+      </div>
+      <!-- ... More Frappés ... -->
+      <div class="menu-item">
+        <h3>Tropical Mango Bubble Frappé</h3>
+        <p>Tropical Mango Bubble Frappé from Frappé.</p>
+        <p>From €4.50</p>
+        <button onclick="openModal('Tropical Mango Bubble Frappé','Tropical Mango Bubble Frappé from Frappé',4.50)">Customize</button>
+      </div>
+    </section>
+
+    <!-- 4) Muffins, Cakes & Sweet Treats (food => Add to Cart) -->
+    <section id="muffins-cakes-sweet-treats" class="menu-section">
+      <h2>Muffins, Cakes &amp; Sweet Treats</h2>
+      <div class="menu-item">
+        <h3>Banana and Pecan Loaf Cake</h3>
+        <p>Banana and Pecan Loaf Cake from Muffins, Cakes &amp; Sweet Treats.</p>
+        <p>€3.50</p>
+        <button onclick="addFoodToCart({name:'Banana and Pecan Loaf Cake', description:'Banana and Pecan Loaf Cake.', price:3.5})">Add to Cart</button>
+      </div>
+      <!-- ... More sweet treats ... -->
+      <div class="menu-item">
+        <h3>Strawberry &amp; Vanilla Sliced Cake</h3>
+        <p>Strawberry &amp; Vanilla Sliced Cake from Muffins, Cakes &amp; Sweet Treats.</p>
+        <p>€3.50</p>
+        <button onclick="addFoodToCart({name:'Strawberry & Vanilla Sliced Cake', description:'Strawberry & Vanilla Sliced Cake.', price:3.5})">Add to Cart</button>
+      </div>
+    </section>
+
+    <!-- 5) Other Hot Drinks (drinks => Customize) -->
+    <section id="other-hot-drinks" class="menu-section">
+      <h2>Other Hot Drinks</h2>
+      <div class="menu-item">
+        <h3>Chai Latte</h3>
+        <p>Chai Latte from Other Hot Drinks.</p>
+        <p>From €4.00</p>
+        <button onclick="openModal('Chai Latte','Chai Latte from Other Hot Drinks',4.00)">Customize</button>
+      </div>
+      <!-- ... More hot drinks ... -->
+      <div class="menu-item">
+        <h3>White Hot Chocolate and Cream</h3>
+        <p>White Hot Chocolate and Cream from Other Hot Drinks.</p>
+        <p>From €4.50</p>
+        <button onclick="openModal('White Hot Chocolate and Cream','White Hot Chocolate and Cream from Other Hot Drinks',4.50)">Customize</button>
+      </div>
+    </section>
+
+    <!-- 6) Pastries, Baps & Breakfast (food => Add to Cart) -->
+    <section id="pastries-baps-breakfast" class="menu-section">
+      <h2>Pastries, Baps &amp; Breakfast</h2>
+      <div class="menu-item">
+        <h3>Brown Toast (V)</h3>
+        <p>Brown Toast (V) from Pastries, Baps &amp; Breakfast.</p>
+        <p>€4.00</p>
+        <button onclick="addFoodToCart({name:'Brown Toast (V)',description:'Brown Toast (V).',price:4.0})">Add to Cart</button>
+      </div>
+      <!-- ... More pastries/baps ... -->
+      <div class="menu-item">
+        <h3>Wholegrain Porridge</h3>
+        <p>Wholegrain Porridge from Pastries, Baps &amp; Breakfast.</p>
+        <p>€4.50</p>
+        <button onclick="addFoodToCart({name:'Wholegrain Porridge',description:'Wholegrain Porridge.',price:4.5})">Add to Cart</button>
+      </div>
+    </section>
+
+    <!-- 7) Sandwiches, Toasties & Hot Meals (food => Add to Cart) -->
+    <section id="sandwiches-toasties-hot-meals" class="menu-section">
+      <h2>Sandwiches, Toasties &amp; Hot Meals</h2>
+      <div class="menu-item">
+        <h3>BBQ Chicken Toastie</h3>
+        <p>BBQ Chicken Toastie from Sandwiches, Toasties &amp; Hot Meals.</p>
+        <p>€4.50</p>
+        <button onclick="addFoodToCart({name:'BBQ Chicken Toastie',description:'BBQ Chicken Toastie.',price:4.5})">Add to Cart</button>
+      </div>
+      <!-- ... More sandwiches/toasties/hot meals ... -->
+      <div class="menu-item">
+        <h3>Smoky Ham &amp; Cheeze Toastie (Vegan)</h3>
+        <p>Smoky Ham &amp; Cheeze Toastie (Vegan) from Sandwiches, Toasties &amp; Hot Meals.</p>
+        <p>€4.50</p>
+        <button onclick="addFoodToCart({name:'Smoky Ham & Cheeze Toastie (Vegan)', description:'Smoky Ham & Cheeze Toastie (Vegan).', price:4.5})">
+          Add to Cart
+        </button>
+      </div>
+    </section>
+
+    <!-- 8) Tea & Infusions (drinks => Customize) -->
+    <section id="tea-infusions" class="menu-section">
+      <h2>Tea &amp; Infusions</h2>
+      <div class="menu-item">
+        <h3>Breakfast Tea</h3>
+        <p>Breakfast Tea from Tea &amp; Infusions.</p>
+        <p>From €4.00</p>
+        <button onclick="openModal('Breakfast Tea','Breakfast Tea from Tea & Infusions',4.00)">Customize</button>
+      </div>
+      <!-- ... More teas ... -->
+      <div class="menu-item">
+        <h3>Spiced Apple with Vitamin B6</h3>
+        <p>Spiced Apple with Vitamin B6 from Tea &amp; Infusions.</p>
+        <p>From €3.50</p>
+        <button onclick="openModal('Spiced Apple with Vitamin B6','Spiced Apple with Vitamin B6 from Tea & Infusions',3.50)">
+          Customize
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Cart -->
+  <aside class="cart" id="cart">
+    <h2>Your Order</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <span>Total: </span><span id="cart-total-price">€0.00</span>
+    </div>
+    <button onclick="goToCheckout()">Checkout</button>
+  </aside>
+
+  <!-- Customization Modal for drinks -->
+  <div class="modal" id="customizationModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <h2 id="modal-item-name">Item Name</h2>
+      <p id="modal-item-desc">Item description goes here.</p>
+      <p>Base Calories: <span id="modal-item-calories">0</span></p>
+
+      <!-- Size Section hidden by default or if you do want multi-sizes, adapt code -->
+      <div class="modal-section" id="size-section">
+        <h3>Size (Required)</h3>
+        <div id="size-options"></div>
+      </div>
+
+      <div class="modal-section">
+        <h3>Optional Extras</h3>
+        <label>
+          <input type="checkbox" name="extra" value="Vanilla Syrup" data-price="0.30">
+          Vanilla Syrup (+€0.30)
+        </label><br>
+        <label>
+          <input type="checkbox" name="extra" value="Caramel Syrup" data-price="0.30">
+          Caramel Syrup (+€0.30)
+        </label><br>
+        <label>
+          <input type="checkbox" name="extra" value="Hazelnut Syrup" data-price="0.30">
+          Hazelnut Syrup (+€0.30)
+        </label><br>
+        <label>
+          <input type="checkbox" name="extra" value="Whipped Cream" data-price="0.20">
+          Whipped Cream (+€0.20)
+        </label><br>
+        <label>
+          <input type="checkbox" name="extra" value="Sugar" data-price="0">
+          Sugar (Free)
+        </label>
+      </div>
+
+      <div class="modal-section">
+        <h3>Extra Espresso Shots (€0.50 each)</h3>
+        <div class="shot-selector">
+          <button type="button" id="decrementShots">-</button>
+          <span id="shotCount">0</span>
+          <button type="button" id="incrementShots">+</button>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <h3>Notes (optional)</h3>
+        <textarea id="modal-item-notes" placeholder="Allergies or dietary requirements..."></textarea>
+      </div>
+
+      <div class="modal-section">
+        <h3>Quantity</h3>
+        <input type="number" id="modal-item-quantity" value="1" min="1" max="10" />
+      </div>
+
+      <div class="modal-section">
+        <strong>Total Price: <span id="modal-item-price">€0.00</span></strong>
+      </div>
+
+      <button onclick="addToCart()">Add to Basket</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Costa Coffee</p>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

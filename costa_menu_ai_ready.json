@@ -1,0 +1,570 @@
+[
+    {
+        "category": "Coffee",
+        "items": [
+            {
+                "name": "Americano",
+                "description": "Americano from Coffee.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Cappuccino",
+                "description": "Cappuccino from Coffee.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Caramel Cortado",
+                "description": "Caramel Cortado from Coffee.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Cinnamon Bun Latte",
+                "description": "Cinnamon Bun Latte from Coffee.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Cortado",
+                "description": "Cortado from Coffee.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Espresso",
+                "description": "Espresso from Coffee.",
+                "prices": {
+                    "Small": 4.0,
+                    "Medium": 4.5,
+                    "Large": 5.0
+                }
+            },
+            {
+                "name": "Flat Black",
+                "description": "Flat Black from Coffee.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Flat White",
+                "description": "Flat White from Coffee.",
+                "prices": {
+                    "Small": 4.0,
+                    "Medium": 4.5,
+                    "Large": 5.0
+                }
+            },
+            {
+                "name": "Latte",
+                "description": "Latte from Coffee.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Mocha",
+                "description": "Mocha from Coffee.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Mocha Cortado",
+                "description": "Mocha Cortado from Coffee.",
+                "prices": {
+                    "Small": 4.5,
+                    "Medium": 5.0,
+                    "Large": 5.5
+                }
+            }
+        ]
+    },
+    {
+        "category": "Coffee Over Ice",
+        "items": [
+            {
+                "name": "Caramel Iced Whipped Latte",
+                "description": "Caramel Iced Whipped Latte from Coffee Over Ice.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Cinnamon Bun Iced Latte",
+                "description": "Cinnamon Bun Iced Latte from Coffee Over Ice.",
+                "prices": {
+                    "Small": 3.0,
+                    "Medium": 3.5,
+                    "Large": 4.0
+                }
+            },
+            {
+                "name": "Iced Americano Black",
+                "description": "Iced Americano Black from Coffee Over Ice.",
+                "prices": {
+                    "Small": 3.0,
+                    "Medium": 3.5,
+                    "Large": 4.0
+                }
+            },
+            {
+                "name": "Iced Cappuccino",
+                "description": "Iced Cappuccino from Coffee Over Ice.",
+                "prices": {
+                    "Small": 4.5,
+                    "Medium": 5.0,
+                    "Large": 5.5
+                }
+            },
+            {
+                "name": "Iced Cortado",
+                "description": "Iced Cortado from Coffee Over Ice.",
+                "prices": {
+                    "Small": 4.0,
+                    "Medium": 4.5,
+                    "Large": 5.0
+                }
+            },
+            {
+                "name": "Iced Flat White",
+                "description": "Iced Flat White from Coffee Over Ice.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Iced Latte",
+                "description": "Iced Latte from Coffee Over Ice.",
+                "prices": {
+                    "Small": 4.0,
+                    "Medium": 4.5,
+                    "Large": 5.0
+                }
+            },
+            {
+                "name": "Iced Mocha",
+                "description": "Iced Mocha from Coffee Over Ice.",
+                "prices": {
+                    "Small": 4.5,
+                    "Medium": 5.0,
+                    "Large": 5.5
+                }
+            },
+            {
+                "name": "White Chocolate Iced Whipped Latte",
+                "description": "White Chocolate Iced Whipped Latte from Coffee Over Ice.",
+                "prices": {
+                    "Small": 3.0,
+                    "Medium": 3.5,
+                    "Large": 4.0
+                }
+            }
+        ]
+    },
+    {
+        "category": "Frapp\u00e9",
+        "items": [
+            {
+                "name": "Chocolate Fudge Brownie Frapp\u00e9",
+                "description": "Chocolate Fudge Brownie Frapp\u00e9 from Frapp\u00e9.",
+                "prices": {
+                    "Small": 4.0,
+                    "Medium": 4.5,
+                    "Large": 5.0
+                }
+            },
+            {
+                "name": "Coffee Frapp\u00e9",
+                "description": "Coffee Frapp\u00e9 from Frapp\u00e9.",
+                "prices": {
+                    "Small": 3.0,
+                    "Medium": 3.5,
+                    "Large": 4.0
+                }
+            },
+            {
+                "name": "Mint Chocolate Chip Frapp\u00e9",
+                "description": "Mint Chocolate Chip Frapp\u00e9 from Frapp\u00e9.",
+                "prices": {
+                    "Small": 3.0,
+                    "Medium": 3.5,
+                    "Large": 4.0
+                }
+            },
+            {
+                "name": "Ruby Chocolate Frapp\u00e9",
+                "description": "Ruby Chocolate Frapp\u00e9 from Frapp\u00e9.",
+                "prices": {
+                    "Small": 4.5,
+                    "Medium": 5.0,
+                    "Large": 5.5
+                }
+            },
+            {
+                "name": "Salted Caramel Frapp\u00e9",
+                "description": "Salted Caramel Frapp\u00e9 from Frapp\u00e9.",
+                "prices": {
+                    "Small": 4.0,
+                    "Medium": 4.5,
+                    "Large": 5.0
+                }
+            },
+            {
+                "name": "Strawberries & Cream Frapp\u00e9",
+                "description": "Strawberries & Cream Frapp\u00e9 from Frapp\u00e9.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Tropical Mango Bubble Frapp\u00e9",
+                "description": "Tropical Mango Bubble Frapp\u00e9 from Frapp\u00e9.",
+                "prices": {
+                    "Small": 4.5,
+                    "Medium": 5.0,
+                    "Large": 5.5
+                }
+            }
+        ]
+    },
+    {
+        "category": "Muffins, Cakes & Sweet Treats",
+        "items": [
+            {
+                "name": "Banana and Pecan Loaf Cake",
+                "description": "Banana and Pecan Loaf Cake from Muffins, Cakes & Sweet Treats.",
+                "price": 3.5
+            },
+            {
+                "name": "Belgian Chocolate Brownie",
+                "description": "Belgian Chocolate Brownie from Muffins, Cakes & Sweet Treats.",
+                "price": 2.5
+            },
+            {
+                "name": "Caramelised Biscuit Brownie",
+                "description": "Caramelised Biscuit Brownie from Muffins, Cakes & Sweet Treats.",
+                "price": 3.0
+            },
+            {
+                "name": "Chocolate & Pistachio Cookie Sandwich",
+                "description": "Chocolate & Pistachio Cookie Sandwich from Muffins, Cakes & Sweet Treats.",
+                "price": 3.5
+            },
+            {
+                "name": "Chocolate Tiffin",
+                "description": "Chocolate Tiffin from Muffins, Cakes & Sweet Treats.",
+                "price": 3.5
+            },
+            {
+                "name": "Iced Chick Gingerbread Biscuit",
+                "description": "Iced Chick Gingerbread Biscuit from Muffins, Cakes & Sweet Treats.",
+                "price": 3.5
+            },
+            {
+                "name": "Millionaire's Shortbread",
+                "description": "Millionaire's Shortbread from Muffins, Cakes & Sweet Treats.",
+                "price": 3.0
+            },
+            {
+                "name": "Raspberry & White Chocolate Blondie",
+                "description": "Raspberry & White Chocolate Blondie from Muffins, Cakes & Sweet Treats.",
+                "price": 2.5
+            },
+            {
+                "name": "Raspberry and Almond Bake",
+                "description": "Raspberry and Almond Bake from Muffins, Cakes & Sweet Treats.",
+                "price": 3.0
+            },
+            {
+                "name": "Rocky Road (Vegan)",
+                "description": "Rocky Road (Vegan) from Muffins, Cakes & Sweet Treats.",
+                "price": 4.5
+            },
+            {
+                "name": "Strawberry & Vanilla Sliced Cake",
+                "description": "Strawberry & Vanilla Sliced Cake from Muffins, Cakes & Sweet Treats.",
+                "price": 3.5
+            }
+        ]
+    },
+    {
+        "category": "Other Hot Drinks",
+        "items": [
+            {
+                "name": "Chai Latte",
+                "description": "Chai Latte from Other Hot Drinks.",
+                "prices": {
+                    "Small": 4.0,
+                    "Medium": 4.0,
+                    "Large": 5.0
+                }
+            },
+            {
+                "name": "Hot Chocolate",
+                "description": "Hot Chocolate from Other Hot Drinks.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            },
+            {
+                "name": "Milk Babyccino",
+                "description": "Milk Babyccino from Other Hot Drinks.",
+                "prices": {
+                    "Small": 3.0,
+                    "Medium": 3.5,
+                    "Large": 4.0
+                }
+            },
+            {
+                "name": "White Hot Chocolate and Cream",
+                "description": "White Hot Chocolate and Cream from Other Hot Drinks.",
+                "prices": {
+                    "Small": 4.5,
+                    "Medium": 5.0,
+                    "Large": 5.5
+                }
+            }
+        ]
+    },
+    {
+        "category": "Pastries, Baps & Breakfast",
+        "items": [
+            {
+                "name": "Brown Toast (V)",
+                "description": "Brown Toast (V) from Pastries, Baps & Breakfast.",
+                "price": 4.0
+            },
+            {
+                "name": "Butter Croissant",
+                "description": "Butter Croissant from Pastries, Baps & Breakfast.",
+                "price": 3.0
+            },
+            {
+                "name": "Chocolate Twist",
+                "description": "Chocolate Twist from Pastries, Baps & Breakfast.",
+                "price": 4.0
+            },
+            {
+                "name": "Cinnamon Bun",
+                "description": "Cinnamon Bun from Pastries, Baps & Breakfast.",
+                "price": 3.0
+            },
+            {
+                "name": "Fruited Teacake (Vegan)",
+                "description": "Fruited Teacake (Vegan) from Pastries, Baps & Breakfast.",
+                "price": 3.0
+            },
+            {
+                "name": "Greek Style Yogurt",
+                "description": "Greek Style Yogurt from Pastries, Baps & Breakfast.",
+                "price": 3.5
+            },
+            {
+                "name": "Pain aux Raisin",
+                "description": "Pain aux Raisin from Pastries, Baps & Breakfast.",
+                "price": 3.5
+            },
+            {
+                "name": "Pork Sausage Bap",
+                "description": "Pork Sausage Bap from Pastries, Baps & Breakfast.",
+                "price": 3.5
+            },
+            {
+                "name": "Smoked Bacon Roll",
+                "description": "Smoked Bacon Roll from Pastries, Baps & Breakfast.",
+                "price": 4.0
+            },
+            {
+                "name": "Wholegrain Porridge",
+                "description": "Wholegrain Porridge from Pastries, Baps & Breakfast.",
+                "price": 4.5
+            }
+        ]
+    },
+    {
+        "category": "Sandwiches, Toasties & Hot Meals",
+        "items": [
+            {
+                "name": "BBQ Chicken Toastie",
+                "description": "BBQ Chicken Toastie from Sandwiches, Toasties & Hot Meals.",
+                "price": 4.5
+            },
+            {
+                "name": "Cajun Spiced Chicken Pizza Wrap",
+                "description": "Cajun Spiced Chicken Pizza Wrap from Sandwiches, Toasties & Hot Meals.",
+                "price": 2.5
+            },
+            {
+                "name": "Cheddar and Slow Roasted Tomato Toastie",
+                "description": "Cheddar and Slow Roasted Tomato Toastie from Sandwiches, Toasties & Hot Meals.",
+                "price": 2.5
+            },
+            {
+                "name": "Chicken & Bacon Caesar Wrap",
+                "description": "Chicken & Bacon Caesar Wrap from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.0
+            },
+            {
+                "name": "Chicken & Bacon Sandwich",
+                "description": "Chicken & Bacon Sandwich from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.5
+            },
+            {
+                "name": "Chicken & Bacon Toastie",
+                "description": "Chicken & Bacon Toastie from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.0
+            },
+            {
+                "name": "Chicken & Chorizo Flatbread",
+                "description": "Chicken & Chorizo Flatbread from Sandwiches, Toasties & Hot Meals.",
+                "price": 4.0
+            },
+            {
+                "name": "Chicken Goujon Wrap",
+                "description": "Chicken Goujon Wrap from Sandwiches, Toasties & Hot Meals.",
+                "price": 4.0
+            },
+            {
+                "name": "Chicken Salad Sandwich",
+                "description": "Chicken Salad Sandwich from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.5
+            },
+            {
+                "name": "Free Range Egg Mayo Sandwich",
+                "description": "Free Range Egg Mayo Sandwich from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.5
+            },
+            {
+                "name": "Ham & Cheese Panini",
+                "description": "Ham & Cheese Panini from Sandwiches, Toasties & Hot Meals.",
+                "price": 4.5
+            },
+            {
+                "name": "Ham & Cheese Toastie",
+                "description": "Ham & Cheese Toastie from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.5
+            },
+            {
+                "name": "Honey Roast Ham & Mature Cheddar Toastie",
+                "description": "Honey Roast Ham & Mature Cheddar Toastie from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.0
+            },
+            {
+                "name": "Kids Cheese & Tomato Pizza (Vegetarian)",
+                "description": "Kids Cheese & Tomato Pizza (Vegetarian) from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.5
+            },
+            {
+                "name": "Low Fat Chicken Flatbread",
+                "description": "Low Fat Chicken Flatbread from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.0
+            },
+            {
+                "name": "Mac and Cheese",
+                "description": "Mac and Cheese from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.5
+            },
+            {
+                "name": "Mozzarella, Tomato, and Basil Panini",
+                "description": "Mozzarella, Tomato, and Basil Panini from Sandwiches, Toasties & Hot Meals.",
+                "price": 3.5
+            },
+            {
+                "name": "Smoky Ham & Cheeze Toastie (Vegan)",
+                "description": "Smoky Ham & Cheeze Toastie (Vegan) from Sandwiches, Toasties & Hot Meals.",
+                "price": 4.5
+            }
+        ]
+    },
+    {
+        "category": "Tea & Infusions",
+        "items": [
+            {
+                "name": "Breakfast Tea",
+                "description": "Breakfast Tea from Tea & Infusions.",
+                "prices": {
+                    "Small": 4.0,
+                    "Medium": 4.5,
+                    "Large": 5.0
+                }
+            },
+            {
+                "name": "Citrus Zing with Vitamin C",
+                "description": "Citrus Zing with Vitamin C from Tea & Infusions.",
+                "prices": {
+                    "Small": 4.5,
+                    "Medium": 5.0,
+                    "Large": 5.5
+                }
+            },
+            {
+                "name": "Earl Grey Tea",
+                "description": "Earl Grey Tea from Tea & Infusions.",
+                "prices": {
+                    "Small": 4.5,
+                    "Medium": 5.0,
+                    "Large": 5.5
+                }
+            },
+            {
+                "name": "Mellow Mango with Zinc",
+                "description": "Mellow Mango with Zinc from Tea & Infusions.",
+                "prices": {
+                    "Small": 4.0,
+                    "Medium": 4.5,
+                    "Large": 5.0
+                }
+            },
+            {
+                "name": "Mint Infusion",
+                "description": "Mint Infusion from Tea & Infusions.",
+                "prices": {
+                    "Small": 4.0,
+                    "Medium": 4.5,
+                    "Large": 5.0
+                }
+            },
+            {
+                "name": "Spiced Apple with Vitamin B6",
+                "description": "Spiced Apple with Vitamin B6 from Tea & Infusions.",
+                "prices": {
+                    "Small": 3.5,
+                    "Medium": 4.0,
+                    "Large": 4.5
+                }
+            }
+        ]
+    }
+]
