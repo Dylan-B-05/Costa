@@ -12,9 +12,12 @@
       <a href="index.html">
         <img src="images/costa-logo.png" alt="Costa Coffee Logo" class="logo" />
       </a>
+
+      <!-- Mobile menu toggle button -->
+      <button id="sidebarToggle">☰ Menu</button>
     </div>
   </header>
-  
+
   <main class="landing-container">
     <section class="landing-info">
       <h2>Scan. Order. Enjoy!</h2>
@@ -27,5 +30,23 @@
   <footer class="footer">
     <p>© 2025 Costa Coffee, Trinity College Dublin Pilot</p>
   </footer>
+
+  <!-- Mobile menu toggle JavaScript -->
+  <script>
+    const toggleButton = document.getElementById('sidebarToggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('show');
+    });
+
+    // Optional: close sidebar when a link is tapped
+    const sidebarLinks = document.querySelectorAll('.sidebar nav a');
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        sidebar.classList.remove('show');
+      });
+    });
+  </script>
 </body>
 </html>
