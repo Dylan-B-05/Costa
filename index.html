@@ -21,13 +21,10 @@
       <a href="index.html">
         <img src="images/costa-logo.png" alt="Costa Coffee Logo" class="logo" />
       </a>
-
-      <!-- Mobile menu toggle button -->
-      <button id="sidebarToggle">☰ Menu</button>
     </div>
   </header>
 
-  <main class="landing-container flex-grow-1 d-flex flex-column justify-content-center align-items-center">
+  <main class="landing-container flex-grow-1 d-flex flex-column justify-content-center align-items-center" style="padding-top: 60px;">
     <section class="landing-info">
       <h2>Scan. Order. Enjoy!</h2>
       <p>Simply scan the QR code at your table to get started.</p>
@@ -39,21 +36,5 @@
   <footer class="footer mt-auto">
     <p>© 2025 Costa Coffee, Trinity College Dublin Pilot</p>
   </footer>
-
-  <script>
-    const toggleButton = document.getElementById('sidebarToggle');
-    const sidebar = document.querySelector('.sidebar');
-
-    toggleButton?.addEventListener('click', () => {
-      sidebar?.classList.toggle('show');
-    });
-
-    const sidebarLinks = document.querySelectorAll('.sidebar nav a');
-    sidebarLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        sidebar?.classList.remove('show');
-      });
-    });
-  </script>
 </body>
 </html>
