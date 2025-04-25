@@ -1,9 +1,12 @@
 // checkout.js
 
 const checkoutItemsContainer = document.getElementById("checkout-items");
-const checkoutSubtotalEl = document.getElementById("checkout-subtotal");
-const checkoutTotalEl = document.getElementById("checkout-total");
-const tipInput = document.getElementById("tipInput");
+const checkoutSubtotalEl     = document.getElementById("checkout-subtotal");
+const checkoutDiscountEl     = document.getElementById("checkout-discount");
+const checkoutTotalEl        = document.getElementById("checkout-total");
+const tipInput               = document.getElementById("tipInput");
+
+const DISCOUNT_RATE = 0.05;   // 5 %
 
 function renderCheckout() {
   const cart = getCart();
@@ -24,32 +27,38 @@ function renderCheckout() {
     `;
     checkoutItemsContainer.appendChild(itemEl);
   });
-  checkoutSubtotalEl.innerText = "€" + subtotal.toFixed(2);
 
-  let tip = parseFloat(tipInput.value) || 0;
-  checkoutTotalEl.innerText = "€" + (subtotal + tip).toFixed(2);
+  const discount = subtotal * DISCOUNT_RATE;
+  const tip      = parseFloat(tipInput.value) || 0;
+  const total    = subtotal - discount + tip;
+
+  checkoutSubtotalEl.innerText = "€" + subtotal.toFixed(2);
+  checkoutDiscountEl.innerText = "-€" + discount.toFixed(2);
+  checkoutTotalEl.innerText    = "€" + total.toFixed(2);
 }
 
-tipInput.addEventListener("input", () => {
-  renderCheckout();
-});
+tipInput.addEventListener("input", renderCheckout);
 
 function placeOrder() {
-  let paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
-  let orderNumber = "CST" + Math.floor(100000 + Math.random() * 900000);
+  const cart          = getCart();
+  const subtotal      = cart.reduce((acc, item) => acc + item.totalPrice, 0);
+  const discount      = subtotal * DISCOUNT_RATE;
+  const tip           = parseFloat(tipInput.value) || 0;
+  const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+  const orderNumber   = "CST" + Math.floor(100000 + Math.random() * 900000);
 
-  let orderData = {
-    orderNumber: orderNumber,
-    cart: getCart(),
-    tip: parseFloat(tipInput.value) || 0,
-    paymentMethod: paymentMethod
+  const orderData = {
+    orderNumber,
+    cart,
+    subtotal,
+    discount,
+    tip,
+    paymentMethod
   };
-  localStorage.setItem("costaOrder", JSON.stringify(orderData));
 
+  localStorage.setItem("costaOrder", JSON.stringify(orderData));
   clearCart();
   window.location.href = "confirmation.html";
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  renderCheckout();
-});
+window.addEventListener("DOMContentLoaded", renderCheckout);

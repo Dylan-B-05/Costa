@@ -1,11 +1,11 @@
 // confirmation.js
 
 window.addEventListener("DOMContentLoaded", () => {
-  let orderData = JSON.parse(localStorage.getItem("costaOrder") || "{}");
+  const orderData = JSON.parse(localStorage.getItem("costaOrder") || "{}");
 
-  let orderNumberEl = document.getElementById("order-number");
-  let orderDetailsEl = document.getElementById("order-details");
-  let paymentMessageEl = document.getElementById("payment-message");
+  const orderNumberEl  = document.getElementById("order-number");
+  const orderDetailsEl = document.getElementById("order-details");
+  const paymentMsgEl   = document.getElementById("payment-message");
 
   orderNumberEl.innerText = orderData.orderNumber || "N/A";
 
@@ -24,23 +24,30 @@ window.addEventListener("DOMContentLoaded", () => {
       `;
     });
 
-    // show tip if any
-    if (orderData.tip && orderData.tip > 0) {
-      html += `<p><strong>Tip:</strong> €${orderData.tip.toFixed(2)}</p>`;
-    }
+    /* Totals */
+    const subtotal = orderData.subtotal ?? orderData.cart.reduce((a, c) => a + c.totalPrice, 0);
+    const discount = orderData.discount ?? subtotal * 0.05;
+    const tip      = orderData.tip      ?? 0;
+    const grand    = subtotal - discount + tip;
 
-    let subtotal = orderData.cart.reduce((acc, curr) => acc + curr.totalPrice, 0);
-    let grandTotal = subtotal + (orderData.tip || 0);
-    html += `<p><strong>Total Paid:</strong> €${grandTotal.toFixed(2)}</p>`;
+    html += `<p><strong>Subtotal:</strong> €${subtotal.toFixed(2)}</p>`;
+    html += `<p><strong>Discount (5 %):</strong> -€${discount.toFixed(2)}</p>`;
+    if (tip > 0) {
+      html += `<p><strong>Tip:</strong> €${tip.toFixed(2)}</p>`;
+    }
+    html += `<p><strong>Total Paid:</strong> €${grand.toFixed(2)}</p>`;
   } else {
     html += "<p>No order details found.</p>";
   }
 
   orderDetailsEl.innerHTML = html;
 
+  /* Payment note */
   if (orderData.paymentMethod === "cash") {
-    paymentMessageEl.innerText = "You chose to pay by cash. Please visit the counter within 20 minutes.";
+    paymentMsgEl.innerText =
+      "You chose to pay by cash. Please visit the counter within 20 minutes.";
   } else {
-    paymentMessageEl.innerText = "Your card payment will be processed shortly. Thank you!";
+    paymentMsgEl.innerText =
+      "Your card payment will be processed shortly. Thank you!";
   }
 });

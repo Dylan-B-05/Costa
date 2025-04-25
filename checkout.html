@@ -19,27 +19,32 @@
     <section>
       <h2>Your Order</h2>
       <div id="checkout-items"></div>
+
       <div class="checkout-total">
         <label for="tipInput">Add a tip (optional): €</label>
         <input type="number" id="tipInput" value="0" min="0" step="0.50">
       </div>
+
       <p class="total-line">
         <strong>Subtotal: </strong> <span id="checkout-subtotal">€0.00</span>
       </p>
       <p class="total-line">
-        <strong>Total (+ Tip): </strong> <span id="checkout-total">€0.00</span>
+        <strong>Discount (5 %): </strong> <span id="checkout-discount">-€0.00</span>
+      </p>
+      <p class="total-line">
+        <strong>Total (+ tip): </strong> <span id="checkout-total">€0.00</span>
       </p>
     </section>
 
     <section>
       <h2>Payment Method</h2>
       <label>
-        <input type="radio" name="paymentMethod" value="card" checked> 
+        <input type="radio" name="paymentMethod" value="card" checked>
         Pay by Card (Google Pay / Apple Pay / Others)
       </label>
       <br>
       <label>
-        <input type="radio" name="paymentMethod" value="cash"> 
+        <input type="radio" name="paymentMethod" value="cash">
         Pay by Cash (Pay at the counter within 20 minutes)
       </label>
     </section>
