@@ -16,8 +16,9 @@
   box-sizing: border-box;
 }
 
-/* Sticky footer approach */
-html, body {
+/* Sticky-footer flex layout */
+html,
+body {
   height: 100%;
 }
 body {
@@ -30,11 +31,16 @@ body {
   color: #2e2e2e;
   line-height: 1.5;
 }
-main, .landing-container, .menu-container, .checkout-container, .confirmation-container {
+
+/* Elements that should stretch (menu handled separately) */
+main,
+.landing-container,
+.checkout-container,
+.confirmation-container {
   flex: 1;
 }
 
-/* Header */
+/* ---------- Header ---------- */
 .header {
   background-color: var(--costa-1);
   display: flex;
@@ -42,11 +48,10 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   align-items: center;
   padding: 0.5rem 1rem;
 
-  /* Added/modified for fixed header */
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: 999;
 }
 .header-inner {
@@ -63,7 +68,7 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   width: auto;
 }
 
-/* Footer pinned at bottom */
+/* ---------- Footer ---------- */
 .footer {
   background-color: var(--costa-1);
   color: var(--costa-3);
@@ -72,15 +77,15 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   margin-top: auto;
 }
 
-/* Page backgrounds */
+/* ---------- Page-specific fixed backgrounds ---------- */
 .landing-body {
   background: url('../images/Landing Page.jpg') center center no-repeat;
   background-size: cover;
 }
 .menu-body {
-  background: url('../images/Menu Page.jpg') center center no-repeat fixed;
+  background: url('../images/Menu Page.jpg') center center no-repeat;
   background-size: cover;
-  min-height: 100vh; /* Ensure full-screen coverage */
+  background-attachment: fixed;
 }
 .checkout-body {
   background: url('../images/Checkout Page.jpg') center center no-repeat;
@@ -91,7 +96,7 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   background-size: cover;
 }
 
-/* Overlay example for confirmation page text */
+/* ---------- Confirmation overlay ---------- */
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   color: #ffffff;
@@ -102,7 +107,7 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   text-align: center;
 }
 
-/* Landing Page */
+/* ---------- Landing page ---------- */
 .landing-container {
   display: flex;
   justify-content: center;
@@ -110,7 +115,7 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   padding: 1rem;
 }
 .landing-info {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   text-align: center;
   padding: 2rem;
@@ -130,15 +135,17 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   background-color: var(--costa-5);
 }
 
-/* Menu Page */
+/* ---------- Menu page ---------- */
 .sidebar {
   width: 200px;
-  background-color: rgba(62,15,27,0.8);
+  background-color: rgba(62, 15, 27, 0.8);
   position: fixed;
-  top: 60px;
+  top: 60px;            /* below fixed header */
   bottom: 0;
+  left: 0;
   overflow-y: auto;
   padding: 1rem;
+  transition: transform 0.3s ease;
 }
 .sidebar nav ul {
   list-style-type: none;
@@ -155,26 +162,19 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   color: #fff;
 }
 
+/* Area that holds menu items */
 .menu-container {
-  margin-left: 220px;
+  margin-left: 220px;        /* space for sidebar */
+  margin-top: 60px;          /* space for fixed header */
   padding: 1rem;
 
-  /* Override flex so we can scroll independently */
-  flex: none;
-
-  /* Leave space for fixed header (assumed ~60px) */
-  margin-top: 60px;
-
-  /* Constrain height so it can scroll */
-  max-height: calc(100vh - 60px);
+  height: calc(100vh - 60px);
   overflow-y: auto;
-
-  box-sizing: border-box;
 }
 .menu-section h2 {
   margin: 2rem 0 1rem;
   color: #ffffff;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 0.5rem;
   border-radius: 6px;
 }
@@ -182,16 +182,16 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   border: 1px solid var(--costa-4);
   padding: 1rem;
   margin-bottom: 1rem;
-  cursor: default; /* we have separate buttons, so entire div not clickable */
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
+  cursor: default;
 }
 .menu-item h3 {
   color: var(--costa-1);
   margin-bottom: 0.5rem;
 }
 .menu-item:hover {
-  background-color: rgba(255,236,230,0.9);
+  background-color: rgba(255, 236, 230, 0.9);
 }
 .menu-item button {
   margin-top: 0.5rem;
@@ -207,18 +207,19 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   background-color: var(--costa-5);
 }
 
-/* Sticky Cart */
+/* ---------- Sticky cart ---------- */
 .cart {
   position: fixed;
   top: 60px;
   right: 0;
   width: 250px;
   bottom: 0;
-  background-color: rgba(62,15,27,0.9);
+  background-color: rgba(62, 15, 27, 0.9);
   color: var(--costa-3);
   border-left: 2px solid var(--costa-4);
   padding: 1rem;
   overflow-y: auto;
+  transition: all 0.3s ease;
 }
 .cart h2 {
   margin-bottom: 1rem;
@@ -243,16 +244,16 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   background-color: var(--costa-5);
 }
 
-/* Modal (critical for showing the pop-up) */
+/* ---------- Modal ---------- */
 .modal {
-  display: none; /* hidden by default; JS sets style.display = "block" */
+  display: none;                /* JS shows it */
   position: fixed;
-  z-index: 999; /* on top of other content */
+  z-index: 999;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5); /* dim screen behind modal */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-content {
   background-color: #fff;
@@ -272,7 +273,7 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   font-size: 1.2rem;
 }
 
-/* Shots & extras */
+/* ---------- Shot selector ---------- */
 .shot-selector {
   display: inline-flex;
   align-items: center;
@@ -293,20 +294,17 @@ main, .landing-container, .menu-container, .checkout-container, .confirmation-co
   background-color: var(--costa-3);
 }
 
-/* Checkout page */
-.checkout-body {
-  background-size: cover;
-}
+/* ---------- Checkout page ---------- */
 .checkout-container {
   max-width: 600px;
   margin: 2rem auto;
   padding: 1rem;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 6px;
 }
 .checkout-container h2 {
   margin-bottom: 1rem;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #ffffff;
   padding: 0.5rem;
   border-radius: 6px;
@@ -321,13 +319,92 @@ button:hover {
   opacity: 0.9;
 }
 
-/* Confirmation page */
-.confirmation-body {
-  background-size: cover;
-}
+/* ---------- Confirmation page ---------- */
 .confirmation-container h2 {
   margin-bottom: 1rem;
 }
 .confirmation-item {
   margin-bottom: 1rem;
 }
+
+/* ===================================================================== */
+/* ====================== RESPONSIVE ADJUSTMENTS ======================= */
+/* ===================================================================== */
+
+/* ---------- Phones (≤ 599 px) ---------- */
+@media (max-width: 599px) {
+  /* Sidebar collapses off-canvas */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 220px;              /* a bit wider for touch */
+    z-index: 998;
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  /* Toggle button */
+  #sidebarToggle {
+    display: block;
+    background-color: var(--costa-4);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.25rem;
+    margin: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* Cart moves to bottom full-width */
+  .cart {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 220px;
+    border-left: none;
+    border-top: 2px solid var(--costa-4);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Menu container spans full width, scrolls above cart */
+  .menu-container {
+    margin: 60px 0 0 0; /* header space, no sidebar */
+    padding: 1rem;
+    height: calc(100vh - 60px - 220px);
+    overflow-y: auto;
+  }
+
+  /* Make buttons & inputs easier to tap */
+  .menu-item button,
+  .cart button,
+  .landing-info button,
+  button {
+    font-size: 1rem;
+  }
+
+  /* Modal fits viewport */
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+}
+
+/* ---------- Tablets (600 px – 1024 px) ---------- */
+@media (min-width: 600px) and (max-width: 1024px) {
+  /* Slightly narrower sidebar & cart to leave room for menu */
+  .sidebar {
+    width: 180px;
+  }
+  .menu-container {
+    margin-left: 200px; /* sidebar + padding */
+  }
+  .cart {
+    width: 220px;
+  }
+}
+
+/* No special rules above 1024 px – existing desktop styles apply */
