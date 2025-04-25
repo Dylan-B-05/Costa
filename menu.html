@@ -6,6 +6,23 @@
   <title>Costa Coffee - Menu</title>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
+<script>
+  /* Mobile sidebar toggle behaviour */
+  const sidebarToggle = document.getElementById('sidebarToggle');
+  const sidebar       = document.querySelector('.sidebar');
+
+  sidebarToggle?.addEventListener('click', () => {
+    sidebar.classList.toggle('show');
+  });
+
+  /* Close sidebar after selecting a category (mobile) */
+  sidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('show');
+    });
+  });
+</script>
+
 <body class="menu-body">
   <header class="header">
     <div class="header-inner">
@@ -31,6 +48,9 @@
       </ul>
     </nav>
   </aside>
+  <!-- Mobile-only sidebar toggle -->
+<button id="sidebarToggle" style="display:none;">☰ Categories</button>
+
 
   <!-- Main Content: Full Static Menu -->
   <main class="menu-container">
