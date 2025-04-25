@@ -19,7 +19,8 @@
 /* Sticky-footer flex layout */
 html,
 body {
-  height: 100%;
+  /* was: height: 100%; */
+  min-height: 100%;            /* allow page to grow beyond 1 viewport */
 }
 body {
   display: flex;
