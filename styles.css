@@ -9,6 +9,11 @@
   --costa-4: #a27448;
   --costa-5: #6c4427;
 }
+/* Hide sidebar toggle on all pages unless specifically re-enabled */
+#sidebarToggle {
+  display: none;
+}
+
 
 * {
   margin: 0;
@@ -348,8 +353,21 @@ button:hover {
     transform: translateX(0);
   }
 
-  /* Toggle button */
-  #sidebarToggle {
+/* ---------- Phones (≤ 599 px) ---------- */
+@media (max-width: 599px) {
+
+  /* Sidebar collapses off-canvas */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 220px;
+    z-index: 998;
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  /* ↓↓↓  moved under .menu-body so it shows only on menu.html  ↓↓↓ */
+  .menu-body #sidebarToggle {
     display: block;
     background-color: var(--costa-4);
     color: #fff;
@@ -360,6 +378,10 @@ button:hover {
     font-weight: bold;
     cursor: pointer;
   }
+
+  /* … (rest of the mobile rules stay unchanged) … */
+}
+
 
   /* Cart moves to bottom */
   .cart {
@@ -412,3 +434,37 @@ button:hover {
 }
 
 /* No special rules above 1024 px – desktop styles apply */
+/* ===== Footer Pinning + Header Overlap Fix ===== */
+
+/* Make sure the footer sticks to bottom */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main,
+.landing-container,
+.menu-container,
+.checkout-container,
+.confirmation-container {
+  flex: 1 0 auto;
+  padding-top: 60px; /* prevent header overlap */
+}
+
+/* Footer behaves correctly on all screens */
+footer,
+.footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+/* For short pages on mobile (prevents white space at bottom) */
+@media (max-width: 599px) {
+  html, body {
+    height: auto !important;
+    min-height: 100% !important;
+    display: flex;
+    flex-direction: column;
+  }
+}
