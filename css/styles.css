@@ -13,10 +13,8 @@
   box-sizing: border-box;
 }
 
-/* ------------------------------------------------------------------ */
-/* Hide toggle button everywhere by default; re-enabled on Menu page */
+/* Hide toggle button everywhere by default */
 #sidebarToggle { display: none; }
-/* ------------------------------------------------------------------ */
 
 body {
   display: flex;
@@ -121,7 +119,7 @@ footer,
   background-color: var(--costa-5);
 }
 
-/* Sidebar (desktop / tablet defaults) */
+/* Sidebar (desktop / tablet) */
 .sidebar {
   width: 200px;
   background-color: rgba(62, 15, 27, 0.8);
@@ -243,7 +241,7 @@ footer,
   border-radius: 6px;
 }
 
-/* ===== Mobile Fix for Footer, Sidebar & Toggle ===== */
+/* ===== Mobile Overrides ===== */
 @media (max-width: 599px) {
   html,
   body {
@@ -267,28 +265,14 @@ footer,
     flex-shrink: 0;
   }
 
-  /* ---- Sidebar slides with left (Menu page only) ---- */
-  .menu-body .sidebar {
-    left: -220px;            /* fully off-screen */
-    width: 220px;
-    transition: left 0.3s ease;
-  }
-  .menu-body .sidebar.show {
-    left: 0;                 /* slide into view */
-  }
+  /* ---- Sidebar removed entirely ---- */
+  .sidebar       { display: none !important; }
+  #sidebarToggle { display: none !important; }
 
-  /* ---- Toggle button visible only on Menu page ---- */
-  .menu-body #sidebarToggle {
-    display: block;          /* globally hidden elsewhere */
-    background-color: var(--costa-4);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 0.75rem 1.25rem;
-    margin: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 999;
+  /* Menu spans full width */
+  .menu-container {
+    margin: 60px 0 0 0 !important;
+    width: 100%;
   }
 
   /* Cart at bottom */
@@ -303,12 +287,6 @@ footer,
     border-top: 2px solid var(--costa-4);
     border-left: none;
     flex-direction: column;
-  }
-
-  /* Menu occupies space above cart */
-  .menu-container {
-    margin: 60px 0 0 0;
-    height: auto;
   }
 
   /* Larger tap targets */
@@ -375,4 +353,3 @@ footer,
     flex-shrink: 0;
   }
 }
-
