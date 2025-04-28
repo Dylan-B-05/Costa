@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+/* ------------------------------------------------------------------ */
+/* Hide toggle button everywhere by default; re-enabled on Menu page */
+#sidebarToggle { display: none; }
+/* ------------------------------------------------------------------ */
+
 body {
   display: flex;
   flex-direction: column;
@@ -23,7 +28,8 @@ body {
   line-height: 1.5;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -55,7 +61,9 @@ footer,
   align-items: center;
   padding: 0.5rem 1rem;
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
 }
 .header-inner {
@@ -113,7 +121,7 @@ footer,
   background-color: var(--costa-5);
 }
 
-/* Sidebar */
+/* Sidebar (desktop / tablet defaults) */
 .sidebar {
   width: 200px;
   background-color: rgba(62, 15, 27, 0.8);
@@ -220,10 +228,11 @@ footer,
   display: none;
   position: fixed;
   z-index: 999;
-  left: 0; top: 0;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-content {
   background-color: #fff;
@@ -234,9 +243,10 @@ footer,
   border-radius: 6px;
 }
 
-/* ===== Mobile Fix for Footer and Flex Stretch ===== */
+/* ===== Mobile Fix for Footer, Sidebar & Toggle ===== */
 @media (max-width: 599px) {
-  html, body {
+  html,
+  body {
     height: auto !important;
     min-height: 100% !important;
     display: flex;
@@ -257,11 +267,31 @@ footer,
     flex-shrink: 0;
   }
 
-  .menu-container {
-    margin: 60px 0 0 0;
-    height: auto;
+  /* ---- Sidebar slides with left (Menu page only) ---- */
+  .menu-body .sidebar {
+    left: -220px;            /* fully off-screen */
+    width: 220px;
+    transition: left 0.3s ease;
+  }
+  .menu-body .sidebar.show {
+    left: 0;                 /* slide into view */
   }
 
+  /* ---- Toggle button visible only on Menu page ---- */
+  .menu-body #sidebarToggle {
+    display: block;          /* globally hidden elsewhere */
+    background-color: var(--costa-4);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.25rem;
+    margin: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  /* Cart at bottom */
   .cart {
     position: fixed;
     bottom: 0;
@@ -275,21 +305,30 @@ footer,
     flex-direction: column;
   }
 
-  .modal-content {
-    width: 95%;
-    margin: 10% auto;
+  /* Menu occupies space above cart */
+  .menu-container {
+    margin: 60px 0 0 0;
+    height: auto;
   }
 
+  /* Larger tap targets */
   .menu-item button,
   .cart button,
   .landing-info button,
   button {
     font-size: 1rem;
   }
-}
-/* ========== FINAL FIX: Footer Sticking & Mobile Stretch ========== */
 
-html, body {
+  /* Modal width */
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+}
+
+/* ========== FINAL FIX: Footer Sticking & Mobile Stretch ========== */
+html,
+body {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -311,9 +350,10 @@ footer,
   margin-top: auto;
 }
 
-/* Mobile fix for short content */
+/* Re-apply mobile footer stretch if other rules overwrite */
 @media (max-width: 599px) {
-  html, body {
+  html,
+  body {
     height: auto !important;
     min-height: 100% !important;
     display: flex;
@@ -335,3 +375,4 @@ footer,
     flex-shrink: 0;
   }
 }
+
