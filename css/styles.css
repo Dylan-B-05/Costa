@@ -353,3 +353,23 @@ footer,
     flex-shrink: 0;
   }
 }
+.confirmation-container {
+  color: white;
+}
+.confirmation-container,
+.checkout-container {
+  color: white;
+}
+.checkout-container {
+  color: white;
+  padding-top: 100px; /* Increased from 60px */
+}
+.checkout-container {
+  color: white;
+  margin-top: 50px;
+}
+.checkout-container,
+.confirmation-container {
+  color: white;
+  margin-top: 50px;
+}
